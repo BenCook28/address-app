@@ -41,10 +41,10 @@ class AddressesController extends Controller
         $this->validate($request, [
             'name' => 'required|min:6|max:255',
             'street1' => 'required|min:6|max:255',
-            'street2' => 'required|min:6|max:255',
+            'street2' => 'min:6|max:255',
             'city' => 'required|min:6|max:255',
-            'state' => 'required|min:6|max:255',
-            'zip' => 'required|min:6|max:255'
+            'state' => 'required|min:4|max:255',
+            'zip' => 'required|min:5|max:255'
         ]);
 
 
